@@ -14,6 +14,7 @@ def _run(cmd: str) -> None:
 def setup() -> None:
     _run("conda env create -f environment.yml")
     _run(f"conda run -n {ENV} pip install -e .")
+    _run("git init")
     _run(f"conda run -n {ENV} pre-commit install")
 
 
