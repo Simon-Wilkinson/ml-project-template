@@ -1,0 +1,21 @@
+name: {{ cookiecutter.project_slug }}
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python={{ cookiecutter.python_version }}
+  - pip
+  - jupyter
+  - ipykernel
+  - pip:
+    - -e .
+    - scikit-learn>=1.4
+    - pandas>=2.0
+    - numpy>=1.26
+    - matplotlib
+    - seaborn
+    - mlflow>=2.12
+    - ruff
+    - black
+    - pre-commit
+    - pytest
