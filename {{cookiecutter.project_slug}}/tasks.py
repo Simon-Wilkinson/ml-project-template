@@ -19,12 +19,12 @@ def setup() -> None:
 
 
 def test() -> None:
-    _run("pytest tests/ -v")
+    _run(f"conda run -n {ENV} pytest tests/ -v")
 
 
 def lint() -> None:
-    _run("ruff check src/ tests/")
-    _run("black --check src/ tests/")
+    _run(f"conda run -n {ENV} ruff check src/ tests/")
+    _run(f"conda run -n {ENV} black --check src/ tests/")
 
 
 def mlflow_ui() -> None:
